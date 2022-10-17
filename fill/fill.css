@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: black;
+  margin: 0px;
+  width: 100%;
+  color: white;
+  text-align: left;
+}
+
+.about {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  background: black;
+  color: white;
+  font: bold 3.6vw sans-serif;
+  font-family: "Montserrat", sans-serif;
+  padding-top: 80px;
+  padding-left: 130px;
+}
+
+header{
+  padding: 30px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-size: 1vw;
+}
+
+li {
+  display: inline;
+  float: right;
+  padding: 8px;
+}
+
+#name{
+  font-weight: bold;
+}
+
+#nav:visited{
+  color: gray;
+}
+
+/* h1 {
+  left: 0;
+  right: 0;
+  height: 50%;
+  font-size: 5vw;
+  text-align: left;
+  padding-left: 250px;
+  padding-right: 250px;
+  padding-top: 240px;
+  padding-bottom: 300px;
+  bottom: 0;
+} */
+
+main {
+  margin-left: 100px;
+  margin-right: 100px;
+  max-width: 2000px;
+}
+
+a {
+color: white;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+p {
+  text-align: center;
+}
+
+.splitting .char {
+  visibility: hidden;
+}
+
+.splitting .char::before, .splitting .char::after {
+  visibility: visible;
+  --duration: 15s;
+  --delay: 0ms;
+  animation: slide-in var(--duration) cubic-bezier(0.9, 0, 0, 1) both infinite;
+  animation-delay: calc(var(--delay) + (10ms * var(--char-index)));
+}
+
+.splitting .char::before {
+  color: white;
+}
+
+.splitting .char::after {
+  animation-name: slide-in-2;
+  color: gray;
+}
+
+@keyframes slide-in {
+  0% {
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
+  30%, 70% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  95%, 100% {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0% 0);
+  }
+}
+
+@keyframes slide-in-2 {
+  0%, 10% {
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
+  35%, 65% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  85%, 100% {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0% 0);
+  }
+}

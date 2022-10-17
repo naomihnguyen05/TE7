@@ -63,6 +63,10 @@ a:link {
   text-decoration: none;
 }
 
+p {
+  text-align: center;
+}
+
 .splitting {
   cursor: pointer;
 }
